@@ -1,0 +1,10 @@
+<h1>Mi Lista</h1>
+<ul class="list-unstyled">
+  <li *ngFor="let item of archivos">
+    <app-item-archivo [itemInfo]="item" (cambioArchivo)="refrescar()"></app-item-archivo>
+  </li>
+</ul>
+
+
+
+

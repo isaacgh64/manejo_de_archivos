@@ -1,0 +1,24 @@
+<div *ngIf="!edicionActiva">
+  <i class="{{itemInfo['tipo'] | filtroExtension}}"></i>
+  {{itemInfo['nombre']}}
+
+  <span>
+    {{itemInfo['tamano']}}
+  </span>
+
+  <span class="herramientas">
+    <span class="item editar">
+      <i class="fa fa-pencil" aria-hidden="true" (click)="activarEdicion()"></i>
+    </span>
+    <span class="item borrar">
+      <i class="fa fa-trash" aria-hidden="true" (click)="borrar(itemInfo['ruta'], itemInfo['nombre'])"></i>
+    </span>
+  </span>
+</div>
+
+<div *ngIf="edicionActiva">
+  <input type="text">
+    <button> Ok </button>
+    <button (click)="desactivarEdicion()">Cancelar</button>
+</div>
+
